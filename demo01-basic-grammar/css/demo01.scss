@@ -1,0 +1,38 @@
+/* 
+	主模块样式
+ */
+// 导入 variable模块样式和混合样式
+@import 'common', 'variable', 'mixin';
+
+div {
+	@include border($color: red);	// 使用混合，采用新字体颜色样式red，padding默认
+}
+
+.scss-a {
+	padding: 5px;
+	background: $bgColor; // 使用variable模块的样式变量
+
+	.scss-b {
+		color: hsl(270, 100%, 50%);
+
+		.scss-d {
+			font: {
+				size: 30px;
+				weight: bold;
+				family: 'Microsoft Yahei'
+			}
+		}
+	}
+}
+
+.scss-c {
+	@extend .scss-b;
+}
+
+%e {
+	background: purple;
+}
+
+.scss-c {
+	@extend %e;
+}

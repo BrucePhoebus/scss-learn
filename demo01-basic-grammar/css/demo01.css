@@ -1,0 +1,38 @@
+@charset "UTF-8";
+/* 
+	主模块样式
+ */
+/* 
+	公共样式
+ */
+* {
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  width: 100%;
+  height: 100%; }
+
+/* 
+	混合border：使用 @mixin 声明
+	传入两个变量：一个是$color，默认值为yellow；一个是$padding，初始值是10px
+ */
+div {
+  display: inline-block;
+  border: 2px solid red;
+  padding: 10px; }
+
+.scss-a {
+  padding: 5px;
+  background: gray; }
+  .scss-a .scss-b, .scss-a .scss-c {
+    color: #8000ff; }
+    .scss-a .scss-b .scss-d, .scss-a .scss-c .scss-d {
+      font-size: 30px;
+      font-weight: bold;
+      font-family: "Microsoft Yahei"; }
+
+.scss-c {
+  background: purple; }
+
+/*# sourceMappingURL=demo01.css.map */

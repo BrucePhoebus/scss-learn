@@ -1,0 +1,9 @@
+/* 
+	混合border：使用 @mixin 声明
+	传入两个变量：一个是$color，默认值为yellow；一个是$padding，初始值是10px
+ */
+@mixin border($color: yellow, $padding: 10px) {
+	display: inline-block;
+	border: 2px solid $color;
+	padding: $padding;
+}
